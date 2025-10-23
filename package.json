@@ -5,13 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.4",
+    "@mui/material": "^7.3.4",
+    "@mui/styled-engine": "^7.3.3",
+    "@mui/x-date-pickers": "^8.14.1",
+    "dayjs": "^1.11.18",
+    "file-saver": "^2.0.5",
+    "ical2json": "^4.1.0",
+    "ics": "^3.8.1",
+    "ramda": "^0.32.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "rollup-plugin-visualizer": "^6.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
