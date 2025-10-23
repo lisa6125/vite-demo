@@ -1,13 +1,13 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import math from "../utils";
+import { add } from "../utils";
 
 export default function Empty() {
   const [count, setCount] = useState(0);
   const navigate = useNavigate();
   const handleCount = () => {
-    setCount(math.add(count));
+    setCount(add(count));
   };
   return (
     <Stack>
