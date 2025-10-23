@@ -16,7 +16,6 @@ import {
 } from "@mui/material";
 import dayjs, { Dayjs } from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
-import { saveAs } from "file-saver";
 import { convert } from "ical2json";
 import { createEvents } from "ics";
 import * as R from "ramda";
@@ -104,7 +103,7 @@ const CalendarPage = () => {
 
   // 匯出至 .ics 檔案的功能
   // TODO: 補上國定假日event
-  const exportToICS = () => {
+  const exportToICS = async () => {
     const events = [];
 
     // 針對每一個 weeklyHoliday（例假日星期幾）
@@ -142,6 +141,7 @@ const CalendarPage = () => {
       });
     });
     console.log("events", events);
+    const { saveAs } = await import("file-saver");
 
     createEvents(events, (error, value) => {
       if (error) {
