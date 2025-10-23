@@ -1,10 +1,11 @@
-import Calendar from "./Calendar";
+import { RouterProvider } from "react-router";
+import { router } from "./Pages/route";
 import "./index.css";
 
 export default function App() {
   return (
     <div className="App">
-      <Calendar/>
+      <RouterProvider {...{ router }} />
     </div>
   );
 }
